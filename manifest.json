@@ -1,0 +1,9 @@
+{
+  "name": "feedr",
+  "description": "Easy feeds for your new tab page",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}
