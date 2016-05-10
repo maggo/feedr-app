@@ -1,0 +1,23 @@
+{
+  "name": "feedr",
+  "version": "0.0.1",
+  "description": "Easy feeds for your new tab page",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js --watch",
+    "build": "webpack -p --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maggo/feedr-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maggo/feedr-app/issues"
+  },
+  "homepage": "https://github.com/maggo/feedr-app#readme",
+  "devDependencies": {
+    "webpack": "^1.12.13"
+  }
+}
