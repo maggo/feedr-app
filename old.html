@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feedr</title>
+  </head>
+  <style type="text/css">
+  body {
+    font-family: sans-serif;
+    margin: 32px;
+    margin-top: 0;
+
+    -webkit-font-smoothing: antialiased;
+  }
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 32px;
+  }
+
+  .main.golden .container.container-main{
+    flex: 0 1 calc(61.8% - 16px);
+  }
+  .main.golden .container-side {
+    flex: 0 1 calc(38.2% - 16px);
+  }
+
+  .main.golden .container > div {
+    flex: 0 1 calc(33% - 16px);
+  }
+  .main.golden .container.textlinks > div {
+    flex: 0 1 100%;
+  }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container > div {
+  flex: 0 1 calc(25% - 16px);
+  margin-bottom: 16px;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+  transition: all .2s ease-out;
+
+  border-radius: 4px;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.meta {
+  width: 100%;
+
+  background-color: white;
+
+  position: absolute;
+
+  transform: translate(0, 0);
+  transition: all .2s ease-out;
+}
+
+.container p {
+  margin: 8px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.meta span {
+  color: lightgray;
+  font-size: smaller;
+}
+
+.awwwards {
+  color: #3c948b;
+}
+.dribble {
+  color: #ea4c89;
+}
+.behance {
+  color: #1769ff;
+}
+.designernews {
+  color: #2d72d9;
+}
+.fubiz {
+  color: #d3304d;
+}
+
+.container > div:hover {
+  box-shadow: 0 16px 16px rgba(0,0,0,0.2);
+  transform: translate(0, -8px);
+}
+
+.container > div:hover .meta {
+  transform: translate(0, -52px);
+}
+
+
+.settings p {
+  font-family: monospace;
+  letter-spacing: 1px;
+
+  margin-left: -32px;
+  margin-right: -32px;
+
+  color: lightgray;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.settings span {
+  border-bottom: 2px solid transparent;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+.settings:not(:hover) span:not(.active) {
+  color: lightgray;
+}
+
+.settings:hover span:not(:hover) {
+  color: lightgray;
+}
+
+.settings .active {
+  border-color: currentColor;
+}
+
+.settings:hover .active {
+  border-color: transparent;
+}
+
+.settings span:hover {
+  border-color: currentColor;
+}
+
+.settings span.active:hover {
+  border-color: currentColor;
+}
+
+</style>
+  <body>
+  <div class="settings">
+  <p>Src: <span class="dribble active">dribble</span> / <span class="behance">behance</span> / <span class="fubiz">fubiz</span> / <span class="designernews">designernews</span> / <span class="awwwards">awwwards</span></p>
+  </div>
+  <div class="main golden">
+<div class="container container-main dribble">
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork ligature testfi asdasdasds asdasdasdasd aasdasdsadas<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="https://dribbble.com/shots/2534065-Prost">
+      <img src="http://www.siiimple.com/wp-content/uploads/2015/12/sr-840x550.jpg">
+      <div class="meta">
+        <p>Title of the artwork<br><span>by Author</span></p>
+      </div>
+    </a>
+  </div>
+  </div>
+  <div class="container-side textlinks">
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  <div><a href="">hackernews link blah blah blahadasd asd asd</a></div>
+  </div>
+  </div>
+  </body>
+</html>
