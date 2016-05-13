@@ -7,7 +7,7 @@ body {
 
 a {
   text-decoration: none;
-  color: gray;
+  color: #333333;
 
   transition: color .2s ease-out;
 }
@@ -65,6 +65,6 @@ a:hover {
 }
 
 .container p span {
-  color: lightgray;
+  color: #797979;
   font-size: smaller;
 }
