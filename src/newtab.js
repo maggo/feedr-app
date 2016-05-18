@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector('#container');
-  fetch('http://feedr.mar.co.de/dribbble')
+  fetch('https://feedr.mar.co.de/dribbble')
     .then((res) => res.json())
     .then((shots) => {
       //console.log(shots);
