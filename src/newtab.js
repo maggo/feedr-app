@@ -1,23 +1,41 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* globals chrome */
+
+function buildItems(shots) {
   const container = document.querySelector('#container');
-  fetch('https://feedr.mar.co.de/dribbble')
-    .then((res) => res.json())
-    .then((shots) => {
-      shots.forEach((shot) => {
-        let el = document.createElement('div');
-        ['hidpi', 'normal', 'teaser'].forEach((size) => {
-          if (shot.image[size]]) {
-            let image = shot.images[size];
-            break;
-          }
-        });
-        el.innerHTML = `
+  shots.forEach((shot) => {
+    let el = document.createElement('div');
+    let image;
+    image = shot.images.hidpi;
+
+    /*['hidpi', 'normal', 'teaser'].forEach((size) => {
+     if (shot.images.hasOwnProperty(size)) {
+     image = shot.images[size];
+     return;
+     }
+     });*/
+    el.innerHTML = `
 <a style="display: block;" href="${shot.html_url}">
-  <img src="${image}">
+  <img width="800" height="600" src="${image}">
   <p>${shot.title}<br><span>by ${shot.user.name}</span></p>
 </a>
 `;
-        container.appendChild(el);
-      });
-    });
+    container.appendChild(el);
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  chrome.storage.local.get(['cache', 'lastUpdated'], (items) => {
+    // Cache invalidation
+    if (!items.lastUpdated || Date.now() - items.lastUpdated > 5 * 60 * 1000) {
+      fetch('https://feedr.mar.co.de/dribbble')
+          .then((res) => res.json())
+          .then((shots) => {
+            buildItems(shots);
+            chrome.storage.local.set({cache: shots, lastUpdated: Date.now()});
+          });
+    } else {
+      buildItems(items.cache);
+    }
+  });
 });
