@@ -3,12 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch('https://feedr.mar.co.de/dribbble')
     .then((res) => res.json())
     .then((shots) => {
-      //console.log(shots);
       shots.forEach((shot) => {
         let el = document.createElement('div');
+        ['hidpi', 'normal', 'teaser'].forEach((size) => {
+          if (shot.image[size]]) {
+            let image = shot.images[size];
+            break;
+          }
+        });
         el.innerHTML = `
 <a style="display: block;" href="${shot.html_url}">
-  <img src="${shot.images.hidpi}">
+  <img src="${image}">
   <p>${shot.title}<br><span>by ${shot.user.name}</span></p>
 </a>
 `;
