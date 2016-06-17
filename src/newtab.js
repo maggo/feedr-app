@@ -5,14 +5,15 @@ function buildItems(shots) {
   shots.forEach((shot) => {
     let el = document.createElement('div');
     let image;
-    image = shot.images.hidpi;
 
-    /*['hidpi', 'normal', 'teaser'].forEach((size) => {
-     if (shot.images.hasOwnProperty(size)) {
-     image = shot.images[size];
-     return;
-     }
-     });*/
+    ['hidpi', 'normal', 'teaser'].some((size) => {
+      const imageExists = shot.images[size];
+      if (imageExists) {
+        image = shot.images[size];
+      }
+      return imageExists;
+    });
+
     el.innerHTML = `
 <a style="display: block;" href="${shot.html_url}">
   <img width="800" height="600" src="${image}">
