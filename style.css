@@ -36,6 +36,13 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  opacity: 0;
+}
+
+.fadein {
+  animation: fadein 1.25s;
+  animation-fill-mode: forwards;
 }
 
 .container > div {
@@ -68,4 +75,35 @@ a:hover {
 .container p span {
   color: #797979;
   font-size: smaller;
+}
+
+h1 {
+  display: inline-block;
+  background: linear-gradient(to right, black 0%, black 40%, red 50%, black 60%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position-x:0%;
+
+  animation: AnimationName 2s ease;
+  animation-delay: 1.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes AnimationName { 
+    0%{background-position-x:0%}
+    100%{background-position-x:-150%}
+}
+
+@keyframes fadein {
+    from {
+      opacity:0;
+      transform: scale(1.04);
+      /*-webkit-filter: blur(4px);*/
+    }
+    to {
+      opacity:1;
+      transform: scale(1.0);
+      /*-webkit-filter: blur(0px);*/
+    }
 }
