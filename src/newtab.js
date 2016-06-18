@@ -35,8 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
             buildItems(shots);
             chrome.storage.local.set({cache: shots, lastUpdated: Date.now()});
           });
+          document.getElementById('container').className += " fadein";
     } else {
       buildItems(items.cache);
+      document.getElementById('container').className += " fadein";
     }
   });
+
+var myArray = ['mei König', 'mei Beschda', 'mei Jung', 'mei Babo', 'Sonnenschein', 'Boss'];  
+var rand = myArray[Math.floor(Math.random() * myArray.length)];
+
+var heading = document.getElementById('heading');
+heading.innerHTML = heading.innerHTML + rand;
 });
